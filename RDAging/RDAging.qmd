@@ -1,0 +1,448 @@
+---
+title: "Time Series Models Forecast Shift in Global R&D Leadership from West to Emerging Regions as Populations Age"
+author: Kara C. Hoover
+date: '3 May 2024 (updated: 4 July 2024)'
+abstract: ""
+format:
+  html:
+    toc: true
+    code-fold: true
+    embed-resources: true
+    default-image-extension: jpeg
+theme: 'cosmos'
+execute: 
+  warning: false
+  messages: false
+bibliography: grateful-refs.bib
+editor: 
+  markdown: 
+    wrap: sentence
+editor_options: 
+  chunk_output_type: console
+---
+
+## Executive Summary
+
+**Background**
+
+As global demographics shift, with an increasing proportion of the population in high GDP countries entering older age brackets, the landscape of research and development (R&D) is poised for significant change.
+This report investigates the anticipated impact of these demographic trends on global R&D leadership, particularly examining the potential shift from Western nations to emerging regions.
+
+**Key Findings**
+
+-   Aging Populations in High GDP Countries: Countries with high gross domestic product (GDP) are experiencing significant aging in their populations.
+    This demographic shift poses a challenge to maintaining their current levels of R&D leadership.
+
+-   Emerging Regions Poised for Growth: While emerging regions are also experiencing aging demographics, they possess youthful populations relative to the West, coupled with rapidly growing educational and research infrastructures.
+    These factors position them as future leaders in R&D.
+
+-   Predictive Analysis: Time series forecasting models applied in this study predict that the leadership in global R&D will likely transition from Western countries to emerging regions over the next two to three decades if things remain as they are.
+
+**Recommendations**
+
+-   Strategic Partnerships: Forging strategic partnerships with emerging economies is crucial for Western countries to leverage the younger demographics and burgeoning research capabilities in these regions.
+
+-   Investment in Education and R&D: Proactive investments in education and R&D infrastructure in emerging regions will be essential.
+    Such investments not only bolster the R&D outputs of these regions but also ensure a more balanced global R&D landscape.
+
+-   Policy Adaptation: Policymakers in high GDP countries need to integrate insights from global demographic trends into national R&D strategies and invest in retention of older workers, recruitment of the smaller pool of younger workers with incentives such as [work place equity and pathways to professional growth](https://www.cnbc.com/2022/06/15/new-report-finds-the-top-work-preferences-amongst-gen-z-talent-.html), and consider international recruitment with easier paths to workforce entry when there are predicted shortfalls.
+
+**Conclusion**
+
+The shift in global R&D leadership requires attention and action from policymakers, educators, and industry leaders worldwide.
+By addressing coming changes proactively, countries can ensure that they remain competitive in the global R&D arena despite demographic challenges.
+
+## Introduction
+
+Global demographic trends are shifting profoundly as populations in high GDP countries such as the United States, Japan, and major European nations age significantly.
+[By 2050 the proportion of the population over age 60 will double from the current value of 12% to 22%](https://www.who.int/news-room/fact-sheets/detail/ageing-and-health).
+This demographic shift is not just a social and health challenge but an economic one when understanding the costs of aging.
+The figure below (using World Bank data) visualizes old age dependency ratio of older dependents (people 65+) to the working-age population (people aged 15-64) and shows the increasing proportion of dependents per 100 working-age population.
+All regions are experiencing a rising old age dependency, with Eastern Europe and the West having the highest proportion, \~25% on average.
+Regional trends can be misleading for regions like Asia where [the Chinese population is shrinking in size and aging faster than almost any other country in the world](https://chinapower.csis.org/china-demographics-challenges/) while [India has surpassed the population size of China and only 7% are aged 65+](https://www.deccanherald.com/india/indias-population-estimated-at-144-crore-24-in-0-14-age-bracket-unfpa-report-2981883) ![Trends in Old Age Dependency by Region](plotoldAgeDependency.jpeg)
+
+Aging populations have significant implications for Gross Domestic Product (GDP), a crucial measure of economic health. GDP heavily relies on Research and Development (R&D) activities, which drive innovation, productivity, and competitiveness. Investments in R&D contribute to long-term economic growth and job creation, but only if there are people to fill the positions. Rates of change for Gross Domestic Expenditure on R&D (GERD) data from (as measured in US dollars per person) when grouped by old age dependency into young, middle-aged, and old populations (using [Jenks](https://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization) breaks) indicate that R&D spending in the middle-aged countries grew by an average of 3.5%, yet countries with older populations like Italy and Japan saw slower growth rates at 2.1% and 2.8%, respectively."
+
+<iframe src="RdExpenditureChange.html" width="100%" height="600" style="border:none;">
+</iframe>
+
+A contemporary example of how rapidly research infrastructure collapses when the majority of skilled workers exit the market is Ukraine, which has [lost 33.5% of researchers](https://www.nature.com/articles/s41599-023-02346-x) due to war with Russia and, even if things were return to normal, the permanent loss would be about 7%.
+While the cause of losing researchers is war, not aging, the effect is the same: with a smaller pool of replacement researchers, the lack of mentorship available for the next generation of PhDs will continue a downward trend within the country, directly affecting the GDP.
+In the case of war, the lost researchers are contributing to another country's GDP.
+In the case of aging, highly skilled personnel are no longer available to mentor replacements and there are fewer qualified workers to fill the gaps, The West has the highest proportion of R&D researchers, followed by Asia and Eastern Europe.
+The numbers may not be sustainable in regions with increasing old age dependency.
+
+## Research Question
+
+The impact of aging demographics on R&D investment and productivity remains unclear.
+Predictive modelling of time series data can be used to assess the potential impact on GDP and overall economic prosperity by examining the relationship between R&D indicators and age dependency.
+
+How will aging populations in traditionally dominant R&D regions affect global leadership in innovation and technology development?
+This report investigates the potential for a paradigm shift in R&D leadership from Western regions to emerging economies, which, despite also aging, have different demographic profiles and economic dynamics.
+
+## Data and Methods
+
+While investment in research and development (R&D) is widely recognized as vital for driving innovation and economic growth, its use as a singular measure can be inconsistent due to variations in reporting methodologies across countries.
+Different accounting practices, definitions of R&D activities, and levels of government support for research can lead to disparities in reported investment figures.
+Relying solely on investment data, therefore, may not provide a comprehensive understanding of a country's innovation landscape or its capacity for scientific advancement.
+By complementing investment data with other indicators such as scientific productivity and the number of researchers engaged in R&D, a more nuanced perspective on a country's innovation ecosystem and its potential for sustainable economic development is gained.
+
+The **Varieties of Democracy** R package `vdem` was used to gather political geographic region data (e_regionpol_6C).
+
+The **World Bank** Bank package `wbstats` was used to gather data on total population, scientific productivity (measured by number of scientific publications and researchers working in R&D fields), and population age demographics:
+
+-   Population, total (SP.POP.TOTL): Total population is based on the de facto definition of population, which counts all residents regardless of legal status or citizenship.
+    The values shown are midyear estimates.
+
+-   Age dependency ratio (SP.POP.DPND.OL): Ratio of older dependents (65+) to working-age population (15-64), **expressed as proportion of dependents per 100 working-age population**.
+
+-   Number of scientific articles (IP.JRN.ARTC.SC): Number of scientific and technical journal articles published in the following fields: physics, biology, chemistry, mathematics, clinical medicine, biomedical research, engineering and technology, and earth and space sciences.Data are from National Science Foundation, Science and Engineering Indicators.
+    **These data are raw numbers whereas the other variables are scaled to population.** This variable will be transformed to publications per million to mirror the researchers in R&D, the final indicator.
+
+-   Researchers in R&D per million (SP.POP.SCIE.RD.P6): Number of researchers engaged in R&D, **expressed per million** who are defined as professionals conducting research and improving or developing concepts, theories, models techniques instrumentation, software of operational methods.
+    R&D covers basic research, applied research, and experimental development.
+
+## Time Series Analysis (1996-2019)
+
+Data for age dependency ratio are available from 1973, but data for the remaining variables are available from 1996-2020.
+To avoid possible disruptions from the COVID-19 pandemic in 2020, the period examined is 1996-2019.
+
+Time series data for two measures of R&D and age dependency from 1996-2019 are used analyze changes and identify trends that can be used to predict or forecast future changes and trends.
+Results of such analysis provide data for evidence-based decision-making, in this case for funding investments globally.
+When the data are visualizing on the same graph, the most variability by region is seen in scientific publications.
+In Asia, the West, and Eastern Europe, scientific publications have a larger growth rate.
+
+When the data are visualized separately by region, there is greater variability evident (scales are adjusted to each region to better observe local trends).
+The West far outstrips all other regions for number of scientific publications, with Eastern Europe showing the most growth compared to the remaining regions.
+There is a slight uptick in publications in the Middle East in recent years, but that value should be taken with a caveat due to the issues noted in the introduction.
+The number of researchers in R&D indicates the most instability over the period of interest, particularly in Asia.The West has the largest number of R&D researchers and the steepest growth curve.
+
+## Predicted Values
+
+To estimate the impact of age dependency on R&D productivity, a time series regression was used to look at the relationship between two measures of research productivity and age dependency.
+
+Predictive Scenarios: Offer scenarios based on your predictive models.
+"Our models forecast that by 2040, countries like India and Brazil could escalate their global R&D standings due to their younger work forces and improving educational infrastructures, challenging the current leaders."
+
+Compare R&D dynamics between countries with aging populations and those with younger populations.
+Highlight specific sectors that might be more vulnerable to workforce aging or benefit from youthful demographics.
+
+Visual Data Representation: Early in the introduction, include a graph or visual representation of the projected population shifts and their correlation with R&D spending trends across different regions.
+
+### Scientific Output
+
+The y-axis in the graphs represents the percentage of papers relative to GDP.
+For instance, a scaled publication value of 20% means that the number of papers is 20% of the GDP.
+Predictive modeling incorporates trends in GDP over decades along with the volume of papers produced, crucial for nations experiencing simultaneous economic growth and increased influence.
+India serves as an exemplary case, exhibiting rapid economic growth and rising geopolitical stature.
+
+Noteworthy patterns emerge in both current and predicted trends, with graphs scaled to the data for each region:
+
+1.  Growth in the West has halted but remains stable, resulting in a comparatively lower predicted growth curve, with publications relative to GDP increasing by over 40%.
+    All other regions continue to increase their output.
+    Eastern Europe closely mirrors the West but experienced a publication downturn during the Kosovo War.
+
+2.  Africa has witnessed sporadic growth in scientific output, with the peak of papers produced only accounting for 4% of GDP.
+    Despite its vast size and human potential, Africa's output does not match its potential.
+    Predictive modeling suggests growth will be severely limited.
+
+3.  The Middle East exhibits the steepest growth trajectory, driven largely by a surge in output over the past decade, with the highest predicted growth.
+    There are, however, national level concerns regarding the means by which some Middle Eastern countries achieve their output, such as the boosting of Saudi Arabia university rankings via offers of cash in exchange for academics listing those universities as the [primary](https://www.science.org/content/article/vendor-offering-citations-purchase-latest-bad-actor-scholarly-publishing) or [secondary](https://www.science.org/doi/10.1126/science.334.6061.1344) affiliation to boost academic rankings internationally.
+    This is part of a larger issue of [academic honesty](https://www.science.org/content/article/vendor-offering-citations-purchase-latest-bad-actor-scholarly-publishing) Indeed, [research security and integrity are increasing concerns in the US](https://www.whitehouse.gov/ostp/news-updates/2022/08/31/an-update-on-research-securitystreamlining-disclosure-standards-to-enhance-clarity-transparency-and-equity/) and integrity, particularly in the US.
+    Issues such as [malignant foreign talent recruitment](https://crsreports.congress.gov/product/pdf/IF/IF12589) have been identified.
+
+4.  Asia and Latin America are predicted to experience similar increases in output, albeit with varying proportions due to publications relative to GDP.
+    For instance, Latin America's output is projected to increase from 6% to approximately 8.4%, while Asia's is expected to rise from 8% to around 11%.
+    While Asia encompasses a vast geographic region, unlike Africa, there exists significant disparity in economies and scientific efforts.
+    Although Africa includes a few wealthy nations, their research output is incomparable to wealthier Asian nations such as Japan, South Korea, or Singapore.
+
+<iframe src="PredPubs.html" width="100%" height="600" style="border:none;">
+</iframe>
+
+Given that within-region variation outside the West may not represent all countries within the area, an analysis focusing on the wealthiest countries within each region could be valuable in identifying potential pairings between wealthy nations with high scientific productivity but aging populations and countries with burgeoning potential and youthful populations.
+The starting point for identifying such countries can be found in previous interaction scatterplot visualizations exploring the relationship between variables.
+
+### Researchers in R&D
+
+As above, the data in each panel are scaled to the specific region.
+Scientific output has exhibited consistent growth across all regions during the study period, except for one notable exception: the West has remained stable without any growth for the past seven years.
+Despite this stagnation, the West maintains the highest output among all regions.
+In contrast, Asia, Latin America, and the Middle East have experienced exponential growth.
+
+Eastern Europe, having weathered significant political upheavals earlier in the past decade, has since rebounded and begun to increase productivity.
+However, the ongoing conflict in Ukraine poses a potential threat to this upward trend, emphasizing the critical role of political stability alongside a robust GDP.
+
+Africa's scientific output has shown limited and inconsistent growth, likely due to political turbulence and erratic economic conditions.
+When comparing current time series data to predicted values, Africa, the Middle East, and Latin America display wider margins of error in prediction, reflecting the less consistent data observed over the study period.
+This unpredictability follows a decreasing order, with Africa being the most unpredictable.
+Additionally, Asia continues to maintain a notably high growth curve, while projections for the West and Eastern Europe suggest less significant gains in the foreseeable future.
+
+<iframe src="PredRd.html" width="100%" height="600" style="border:none;">
+</iframe>
+
+As noted above, Within-region variation can paint a different picture.
+For instance, comparing researchers per million in Japan versus Cambodia reveals that regional-level analysis serves as only a starting point.
+Similarly, comparing Kenya to the Democratic Republic of the Congo highlights significant disparities in current output and potential.
+These data are accessible in the interactive scatterplots under the section exploring the relationship between variables.
+
+## Solution
+
+This analysis serves as an exploration of regional trends, with individual country models representing the next step. Deeper investigations into top-performing countries within regions with young populations will be essential for assessing investment potential and partnership opportunities.
+
+To address the challenges posed by aging populations in R&D, countries may explore strategic partnerships and investment opportunities. Major R&D leaders such as the US, Germany, UK, and Japan often engage in bilateral or multilateral funding agreements to foster mutual benefit.
+These agreements are driven by a variety of factors, including  similarity in merit review, capacity to invest equally, access to specialized instruments and model programs. While younger countries may possess workforce potential, they often lack resources for higher education and innovation. Strategic partnerships with less affluent countries and young populations, such as the [NIH DS-I Africa](https://www.nih.gov/news-events/news-releases/nih-awards-nearly-75m-catalyze-data-science-research-africa) or [TREND in Africa](https://trendinafrica.org/) initiatives, aim to build research infrastructure in regions with untapped human talent. By investing in such partnerships, Western countries can enhance innovation capabilities in regions lacking capital, thereby ensuring their continued relevance in the evolving R&D landscape. Meanwhile, regions with youthful populations stand poised to seize opportunities and emerge as significant players in global R&D.
+
+## Conclusion
+
+Many countries with high gross domestic product (GDP) exhibit increasingly top-heavy age demographics, while those with lower GDP tend to have more bottom-heavy distributions.
+High GDP countries often lead in terms of research and development (R&D), but will that be sustained when the aging population of workers retires?
+This report uses **time series plots and predictive regression models** to explore the relationship between R&D indicators and age demographics.
+The findings suggest a future shift in R&D leadership from Western regions, which currently dominate, to emerging regions, which are rapidly aging but still possess significant growth potential.
+To maintain competitive advantage, countries with aging populations are recommended to invest in strategic partnerships and collaborative initiatives to leverage the youthful demographics of emerging regions.
+This approach will not only sustain but also enhance their R&D capabilities, ensuring a balanced global R&D landscape.
+
+## Code Chunks
+
+**Code for packages and getting data**
+```{r librariesData, warnings=FALSE, messages=FALSE}
+#load packages for data reading and wrangling
+library(data.table) #read data
+library(janitor) #clean names
+library(dplyr); library(tidytable); 
+library(purrr); library(tidyr) #wrangle data
+library(countrycode) #country codes
+
+#load packages for data via API
+library(wbstats); library(vdemdata)
+
+#download packages for data visualization
+library(ggplot2); library(plotly); library(ggrepel)
+library(classInt); library(scales) 
+
+#regression
+library(sjPlot); library(sjmisc); library(ggeffects)
+
+#citation
+library(grateful)
+
+#get data from vdem
+vdemData <- vdem |>
+  select(
+    vDemCtryId = country_id,
+    country = country_name, 
+    region = e_regionpol_6C,
+    year
+    ) |>
+  mutate(region = case_match(region, 
+     1 ~ "Eastern Europe", 
+     2 ~ "Latin America",  
+     3 ~ "Middle East",   
+     4 ~ "Africa", 
+     5 ~ "the West", 
+     6 ~ "Asia")
+  )
+
+#Add country codes to vdem data for final merge
+vdemData <- vdemData |>    
+  mutate(iso3c = countrycode(
+    sourcevar = vDemCtryId, 
+    origin = "vdem",         
+    destination = "wb"))
+
+# store indicators from World Bank
+indicators <- c(
+  'popTotal' = 'SP.POP.TOTL', 
+  'gdp' = 'NY.GDP.MKTP.CD',
+  'oldAgeDependency' = 'SP.POP.DPND.OL',
+  'rdExpenditure' = 'GB.XPD.RSDV.GD.ZS',
+  'researchersRD' = 'SP.POP.SCIE.RD.P6', 
+  'outputPubs' = 'IP.JRN.ARTC.SC')
+
+# download world bank data
+wbData <- wb_data(indicators, mrv=50) |>
+  select(!iso2c) |>
+  rename(year = date)
+
+#Perform left join using common iso3c variable and year
+rd <- left_join(vdemData, wbData, by = c("iso3c", "year")) |> 
+  rename(country = country.x) |> # rename country.x, keep vdem country
+  select(!country.y)  
+
+#remove extra country id
+rd <- rd |> select(!vDemCtryId)
+
+#relocate columns
+rd <- rd |> relocate(iso3c, .before = country)
+
+# Scale outputPubs to per million people
+rd$outputPubsScaled <- (rd$outputPubs / rd$popTotal) * 1e6  # Multiplies by 1,000,000 to scale per million
+```
+
+**Code for creating intro age dependency graphs**
+```{r agingGraph, fig.width=9, fig.height=6}
+#filter by missing data
+rdDateLimit <- dplyr::filter(rd, year > 1995)
+rdDateLimit <- dplyr::filter(rdDateLimit, year < 2020)
+
+#summarize by year but keep country out
+rdSummarize <- rdDateLimit %>%
+  group_by(region, year) %>%
+  summarise(
+    oldAgeDependencyMedian = median(oldAgeDependency, na.rm = TRUE),
+    rdExpenditureMedian = median(rdExpenditure, na.rm = TRUE),
+    researchersRDMedian = median(researchersRD, na.rm = TRUE),
+    outputPubsMedian = median(outputPubs, na.rm = TRUE),
+    outputPubsScaledMedian = median(outputPubsScaled, na.rm = TRUE),
+    gdpMedian = median(gdp, na.rm = TRUE),
+    popTotalMedian = median(popTotal, na.rm = TRUE),
+    .groups = "drop")
+#aging plot
+plotoldAgeDependency <- 
+  ggplot(rdSummarize, aes(x = year, y = oldAgeDependencyMedian, color = region)) +
+    geom_line() +
+    labs(title = '',
+         x = "Year",
+         y = "Median Value for Age Dependency",
+        caption= 'Data Source: World Bank') +
+    theme_minimal() +
+    scale_color_viridis_d() +
+    facet_wrap(~region, nrow = 3, scales='free')
+ggsave("plotoldAgeDependency.jpeg", plot = plotoldAgeDependency, device = "jpeg", 
+  width = 9, height = 6, units = 'in', dpi = 300, type = 'cairo')
+```
+
+**Code for creating intro RD change over time graph by age category**
+```{r rdChangeGraph, fig.width=9, fig.height=6}
+# Initial filtering and data cleaning
+rdFiltered <- rd %>%
+  filter(year > 1995, year < 2020) %>%
+  filter(!is.na(oldAgeDependency), !is.na(rdExpenditure))
+
+# Calculate Jenks natural breaks on the complete data set
+jenks_breaks <- classIntervals(rdFiltered$oldAgeDependency, n = 3, style = "jenks")$brks
+
+# Ensure unique breaks
+if (length(unique(jenks_breaks)) < length(jenks_breaks)) {
+  jenks_breaks <- unique(jenks_breaks)
+}
+break_labels <- sprintf("%0.2f - %0.2f", head(jenks_breaks, -1), tail(jenks_breaks, -1))
+
+# Assign age categories with detailed labels
+rdFiltered <- rdFiltered %>%
+  mutate(ageCategory = cut(oldAgeDependency, breaks = jenks_breaks, labels = break_labels, include.lowest = TRUE))
+
+# Summarize data by year and age category
+rdSummarize <- rdFiltered %>%
+  group_by(year, ageCategory) %>%
+  summarise(
+    oldAgeDependencyMedian = median(oldAgeDependency, na.rm = TRUE),
+    rdExpenditureMedian = median(rdExpenditure, na.rm = TRUE),
+    .groups = 'drop'
+  )
+
+# Base year calculation - the nearest year >= 1996 that is a multiple of 3
+base_year <- 1996 + ((3 - (1996 %% 3)) %% 3)
+
+# Compute changes within each age category
+rdSummarize <- rdSummarize %>%
+  arrange(ageCategory, year) %>%
+  group_by(ageCategory) %>%
+  mutate(changeInExpenditure = rdExpenditureMedian - lag(rdExpenditureMedian, n = 3)) %>%
+  ungroup()
+
+# Prepare labels for changes
+rdSummarize <- rdSummarize %>%
+  mutate(label = ifelse(year >= base_year & (year - base_year) %% 3 == 0 & !is.na(changeInExpenditure),
+                        sprintf("Δ %.2f", changeInExpenditure), ""))
+
+# Plot the data
+plotAgeRD <- ggplot(rdSummarize, aes(x = year, y = rdExpenditureMedian, group = ageCategory, color = ageCategory)) +
+  geom_line() +  
+  geom_point() +
+  labs(title = 'Change (Δ) in R&D Expenditure Every Three Years',
+       x = "Year",
+       y = "R&D Expenditure Median (USD per 1 Million)",
+       color = "Old Age Dependency") +
+  scale_x_continuous(breaks = seq(base_year, max(rdSummarize$year), by = 3)) +
+  scale_y_continuous(limits = c(min(rdSummarize$rdExpenditureMedian) * 0.9, max(rdSummarize$rdExpenditureMedian) * 1.1)) +
+  scale_color_viridis_d(end = .8) +
+  theme_minimal() +
+  theme(legend.position = 'right', 
+        legend.spacing.x = unit(1.0, 'cm')) +
+  theme(panel.spacing = unit(1, "cm"))
+
+# Convert to interactive plot
+p1 <- ggplotly(plotAgeRD)
+htmlwidgets::saveWidget(p1, "RdExpenditureChange.html", selfcontained = TRUE)
+```
+
+**Code for predictive models for publications and age dependency**
+```{r rdPredict, fig.width=9, fig.height=6}
+# fit and plot model with 3-way-interaction
+fit <- lm(outputPubsScaled ~  oldAgeDependency * region, data = rd)
+
+preds <- ggpredict(fit, terms = c("oldAgeDependency", "region"))
+
+# Plot using ggplot2
+pubswidget =ggplot(preds, aes(x = x, y = predicted)) +  # Remove color and fill from global aesthetics
+  geom_line(color="steelblue") +  # Set line color to blue
+  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), fill = "slategray3", alpha = 0.2) +  # Set ribbon color to light blue
+  labs(
+    x = "Aging Population Index",
+    y = "Number of Publications per Million",
+    title = "Predicted Impact of Aging Population on Publications",
+    subtitle = "Analyzing Trends Over Regions"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "none",  # Ensure legend is not shown
+    strip.background = element_rect(colour = "snow", fill = "steelblue"),
+    strip.text.x = element_text(colour = "snow")
+  ) +
+  facet_wrap(~group)
+
+# Convert to interactive plot
+p2 <- ggplotly(pubswidget)
+htmlwidgets::saveWidget(p2, "PredPubs.html", selfcontained = TRUE)
+
+```
+
+**Code for predictive models for researchers in R&D and age dependency**
+```{r pubsPredict, fig.width=9, fig.height=6}
+# fit and plot model with 3-way-interaction
+fit2 <- lm(researchersRD ~  oldAgeDependency * region, data = rd)
+
+preds <- ggpredict(fit2, terms = c("oldAgeDependency", "region"))
+
+# Plot using ggplot2
+rdwidget = ggplot(preds, aes(x = x, y = predicted)) +  # Remove color and fill from global aesthetics
+  geom_line(color="steelblue") +  # Set line color to blue
+  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), fill = "slategray3", alpha = 0.2) +  # Set ribbon color to light blue
+  labs(
+    x = "Aging Population Index",
+    y = "Number of Researchers in R&R per Million",
+    title = "Predicted Impact of Aging Population on Researchers in R&D",
+    subtitle = "Analyzing Trends Over Regions"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "none",  # Ensure legend is not shown
+    strip.background = element_rect(colour = "snow", fill = "steelblue"),
+    strip.text.x = element_text(colour = "snow")
+  ) +
+  facet_wrap(~group)
+
+# Convert to interactive plot
+p3 <- ggplotly(rdwidget)
+htmlwidgets::saveWidget(p3, "PredRd.html", selfcontained = TRUE)
+
+```
+
+## Bibliography
+
+### `grateful` was used to create the list of R packages used
+
+```{r bibliography, echo=FALSE}
+#generate package citation
+cite_packages(citation.style = "peerj", output = "table", out.dir = ".", include.RStudio = TRUE, passive.voice=FALSE)
+```
