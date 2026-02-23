@@ -2,15 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.9.23">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kara C. Hoover">
-<meta name="dcterms.date" content="2024-05-03">
 
-<title>Time Series Models Forecast Shift in Global R&amp;D Leadership</title>
+<title>Time Series Models Forecast a Shift in Global R&amp;D Leadership Away from the West</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -22,58 +24,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="RDAging_files/libs/clipboard/clipboard.min.js"></script>
-<script src="RDAging_files/libs/quarto-html/quarto.js"></script>
-<script src="RDAging_files/libs/quarto-html/popper.min.js"></script>
-<script src="RDAging_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="RDAging_files/libs/quarto-html/anchor.min.js"></script>
-<link href="RDAging_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="RDAging_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="RDAging_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="RDAging_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="RDAging_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="forecasting-rd-leadership-dynamics-revised_files/libs/clipboard/clipboard.min.js"></script>
+<script src="forecasting-rd-leadership-dynamics-revised_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="forecasting-rd-leadership-dynamics-revised_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="forecasting-rd-leadership-dynamics-revised_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="forecasting-rd-leadership-dynamics-revised_files/libs/quarto-html/popper.min.js"></script>
+<script src="forecasting-rd-leadership-dynamics-revised_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="forecasting-rd-leadership-dynamics-revised_files/libs/quarto-html/anchor.min.js"></script>
+<link href="forecasting-rd-leadership-dynamics-revised_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="forecasting-rd-leadership-dynamics-revised_files/libs/quarto-html/quarto-syntax-highlighting-076ecbd647e1f0418c5051713cd9b730.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="forecasting-rd-leadership-dynamics-revised_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="forecasting-rd-leadership-dynamics-revised_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="forecasting-rd-leadership-dynamics-revised_files/libs/bootstrap/bootstrap-fdc35ccebf6ef883c9ad23e25989f106.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
-<body>
+<body class="blues quarto-light">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -82,18 +52,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary">Executive Summary</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
-  <li><a href="#data-and-methods" id="toc-data-and-methods" class="nav-link" data-scroll-target="#data-and-methods">Data and Methods</a></li>
-  <li><a href="#time-series-analysis-1996-2019" id="toc-time-series-analysis-1996-2019" class="nav-link" data-scroll-target="#time-series-analysis-1996-2019">Time Series Analysis (1996-2019)</a></li>
-  <li><a href="#predicted-values" id="toc-predicted-values" class="nav-link" data-scroll-target="#predicted-values">Predicted Values</a>
+  <li><a href="#research-answers" id="toc-research-answers" class="nav-link" data-scroll-target="#research-answers">Research Answers</a>
   <ul class="collapse">
-  <li><a href="#scientific-output" id="toc-scientific-output" class="nav-link" data-scroll-target="#scientific-output">Scientific Output</a></li>
-  <li><a href="#researchers-in-rd" id="toc-researchers-in-rd" class="nav-link" data-scroll-target="#researchers-in-rd">Researchers in R&amp;D</a></li>
+  <li><a href="#aging-is-universal-but-asymmetric" id="toc-aging-is-universal-but-asymmetric" class="nav-link" data-scroll-target="#aging-is-universal-but-asymmetric">Aging is Universal but Asymmetric</a></li>
+  <li><a href="#rd-expenditure-growth-slows-as-populations-age" id="toc-rd-expenditure-growth-slows-as-populations-age" class="nav-link" data-scroll-target="#rd-expenditure-growth-slows-as-populations-age">R&amp;D Expenditure Growth Slows as Populations Age</a></li>
+  <li><a href="#the-west-has-plateaued-emerging-regions-continue-to-grow" id="toc-the-west-has-plateaued-emerging-regions-continue-to-grow" class="nav-link" data-scroll-target="#the-west-has-plateaued-emerging-regions-continue-to-grow">The West Has Plateaued; Emerging Regions Continue to Grow</a></li>
+  <li><a href="#researcher-numbers-are-most-unstable-in-asia" id="toc-researcher-numbers-are-most-unstable-in-asia" class="nav-link" data-scroll-target="#researcher-numbers-are-most-unstable-in-asia">Researcher Numbers Are Most Unstable in Asia</a></li>
   </ul></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  <li><a href="#code-chunks" id="toc-code-chunks" class="nav-link" data-scroll-target="#code-chunks">Code Chunks</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#study-design" id="toc-study-design" class="nav-link" data-scroll-target="#study-design">Study Design</a></li>
+  <li><a href="#data-code" id="toc-data-code" class="nav-link" data-scroll-target="#data-code">Data &amp; Code</a></li>
+  <li><a href="#tools-technologies" id="toc-tools-technologies" class="nav-link" data-scroll-target="#tools-technologies">Tools &amp; Technologies</a></li>
+  <li><a href="#expertise" id="toc-expertise" class="nav-link" data-scroll-target="#expertise">Expertise</a></li>
   </ul>
 </nav>
 </div>
@@ -101,10 +72,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Time Series Models Forecast Shift in Global R&amp;D Leadership</h1>
-<p class="subtitle lead">Trends away from Western nations towards Emerging Regions</p>
+<h1 class="title">Time Series Models Forecast a Shift in Global R&amp;D Leadership Away from the West</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">times eries | forecasting | policy | R&amp;D | data visualization</div>
+    <div class="quarto-category">time series</div>
+    <div class="quarto-category">forecasting</div>
+    <div class="quarto-category">policy</div>
+    <div class="quarto-category">R&amp;D</div>
+    <div class="quarto-category">data visualization</div>
   </div>
   </div>
 
@@ -122,7 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 3, 2024</p>
+      <p class="date">May 2024</p>
     </div>
   </div>
   
@@ -136,380 +110,168 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="executive-summary" class="level2">
 <h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
-<p><strong>Background</strong></p>
-<p>As global demographics shift, with an increasing proportion of the population in high GDP countries entering older age brackets, the landscape of research and development (R&amp;D) is poised for significant change. This report investigates the anticipated impact of these demographic trends on global R&amp;D leadership, particularly examining the potential shift from Western nations to emerging regions.</p>
+<p><strong>Problem:</strong> Countries with high GDP are aging rapidly – <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health">by 2050, the share of the global population over 60 will double from 12% to 22%</a>. R&amp;D leadership depends on a skilled, active research workforce. If high-GDP Western countries cannot replace retiring researchers, their dominance in global R&amp;D will erode. Emerging regions are also aging, but their populations remain younger relative to the West and their research infrastructures are growing. The question is whether this demographic asymmetry will translate into a shift in global R&amp;D leadership over the next two to three decades.</p>
+<p><strong>Approach:</strong> V-Dem and World Bank data included old age dependency, R&amp;D expenditure, scientific publications, and researchers in R&amp;D across six world regions from 1996 to 2019. Time series analysis identified regional trends while linear regression models (with region interactions) generated predicted values for two R&amp;D productivity measures as a function of aging. Jenks natural breaks classification grouped countries by age dependency profile to examine how R&amp;D expenditure trajectories differ across young, middle-aged, and old populations.</p>
+<p><strong>Implications:</strong> Time series forecasting models predict that R&amp;D leadership will shift from Western regions to emerging economies – particularly Asia, Latin America, and the Middle East – if current demographic and investment trajectories continue. The West has already plateaued in researcher growth despite maintaining the highest absolute output. Strategic partnerships with younger-population regions and proactive investment in research infrastructure are the most viable policy levers for sustaining Western R&amp;D relevance.</p>
+<p><strong>Significance:</strong> This analysis provides an evidence base for international R&amp;D funding strategy. Identifying which regions have youthful workforces and growing research capacity – and pairing that with which high-GDP countries face workforce gaps – creates a actionable framework for bilateral and multilateral co-funding decisions.</p>
 <p><strong>Key Findings</strong></p>
 <ul>
-<li><p>Aging Populations in High GDP Countries: Countries with high gross domestic product (GDP) are experiencing significant aging in their populations. This demographic shift poses a challenge to maintaining their current levels of R&amp;D leadership.</p></li>
-<li><p>Emerging Regions Poised for Growth: While emerging regions are also experiencing aging demographics, they possess youthful populations relative to the West, coupled with rapidly growing educational and research infrastructures. These factors position them as future leaders in R&amp;D.</p></li>
-<li><p>Predictive Analysis: Time series forecasting models applied in this study predict that the leadership in global R&amp;D will likely transition from Western countries to emerging regions over the next two to three decades if things remain as they are.</p></li>
+<li>All regions are experiencing rising old age dependency; the West and Eastern Europe have the highest current ratios, averaging approximately 25 dependents per 100 working-age adults</li>
+<li>R&amp;D expenditure growth is slower in countries with older populations – middle-aged countries grew at an average of 3.5%, while older countries like Italy and Japan grew at 2.1% and 2.8% respectively</li>
+<li>Scientific publication output has plateaued in the West but continues to grow in Asia, Latin America, and the Middle East (but the latter has potential inflation due to unethical practices)</li>
+<li>Predictive models show that as old age dependency rises, both publications per million and researchers per million decline – with the largest predicted declines in the West and Eastern Europe</li>
+<li>Africa’s output remains severely below its human potential, with peak papers at only 4% of GDP; predictive models suggest continued limited growth</li>
 </ul>
-<p><strong>Recommendations</strong></p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Policy Recommendations
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li><p>Strategic Partnerships: Forging strategic partnerships with emerging economies is crucial for Western countries to leverage the younger demographics and burgeoning research capabilities in these regions.</p></li>
-<li><p>Investment in Education and R&amp;D: Proactive investments in education and R&amp;D infrastructure in emerging regions will be essential. Such investments not only bolster the R&amp;D outputs of these regions but also ensure a more balanced global R&amp;D landscape.</p></li>
-<li><p>Policy Adaptation: Policymakers in high GDP countries need to integrate insights from global demographic trends into national R&amp;D strategies and invest in retention of older workers, recruitment of the smaller pool of younger workers with incentives such as <a href="https://www.cnbc.com/2022/06/15/new-report-finds-the-top-work-preferences-amongst-gen-z-talent-.html">work place equity and pathways to professional growth</a>, and consider international recruitment with easier paths to workforce entry when there are predicted shortfalls.</p></li>
+<li>Forge strategic R&amp;D partnerships with emerging economies that have younger workforces and growing research capacity – programs like <a href="https://www.nih.gov/news-events/news-releases/nih-awards-nearly-75m-catalyze-data-science-research-africa">NIH DS-I Africa</a> and <a href="https://trendinafrica.org/">TREND in Africa</a> offer a model for co-investment in regions with untapped human talent</li>
+<li>Invest in workforce retention policies targeting older researchers and incentive structures to attract the smaller pool of younger workers, including <a href="https://www.cnbc.com/2022/06/15/new-report-finds-the-top-work-preferences-amongst-gen-z-talent-.html">workplace equity and professional growth pathways</a>, and streamlined international recruitment</li>
+<li>Disaggregate regional R&amp;D analysis to the country level before making funding decisions – regional averages obscure large within-region variation, particularly in Asia and Africa</li>
 </ul>
-<p><strong>Conclusion</strong></p>
-<p>The shift in global R&amp;D leadership requires attention and action from policymakers, educators, and industry leaders worldwide. By addressing coming changes proactively, countries can ensure that they remain competitive in the global R&amp;D arena despite demographic challenges.</p>
-</section>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Global demographic trends are shifting profoundly as populations in high GDP countries such as the United States, Japan, and major European nations age significantly. <a href="https://www.who.int/news-room/fact-sheets/detail/ageing-and-health">By 2050 the proportion of the population over age 60 will double from the current value of 12% to 22%</a>. This demographic shift is not just a social and health challenge but an economic one when understanding the costs of aging. The figure below (using World Bank data) visualizes old age dependency ratio of older dependents (people 65+) to the working-age population (people aged 15-64) and shows the increasing proportion of dependents per 100 working-age population. All regions are experiencing a rising old age dependency, with Eastern Europe and the West having the highest proportion, ~25% on average. Regional trends can be misleading for regions like Asia where <a href="https://chinapower.csis.org/china-demographics-challenges/">the Chinese population is shrinking in size and aging faster than almost any other country in the world</a> while <a href="https://www.deccanherald.com/india/indias-population-estimated-at-144-crore-24-in-0-14-age-bracket-unfpa-report-2981883">India has surpassed the population size of China and only 7% are aged 65+</a> <img src="plotoldAgeDependency.jpeg" class="img-fluid" alt="Trends in Old Age Dependency by Region"></p>
-<p>Aging populations have significant implications for Gross Domestic Product (GDP), a crucial measure of economic health. GDP heavily relies on Research and Development (R&amp;D) activities, which drive innovation, productivity, and competitiveness. Investments in R&amp;D contribute to long-term economic growth and job creation, but only if there are people to fill the positions. Rates of change for Gross Domestic Expenditure on R&amp;D (GERD) data from (as measured in US dollars per person) when grouped by old age dependency into young, middle-aged, and old populations (using <a href="https://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization">Jenks</a> breaks) indicate that R&amp;D spending in the middle-aged countries grew by an average of 3.5%, yet countries with older populations like Italy and Japan saw slower growth rates at 2.1% and 2.8%, respectively.”</p>
-<iframe src="RdExpenditureChange.html" width="100%" height="600" style="border:none;">
-</iframe>
-<p>A contemporary example of how rapidly research infrastructure collapses when the majority of skilled workers exit the market is Ukraine, which has <a href="https://www.nature.com/articles/s41599-023-02346-x">lost 33.5% of researchers</a> due to war with Russia and, even if things were return to normal, the permanent loss would be about 7%. While the cause of losing researchers is war, not aging, the effect is the same: with a smaller pool of replacement researchers, the lack of mentorship available for the next generation of PhDs will continue a downward trend within the country, directly affecting the GDP. In the case of war, the lost researchers are contributing to another country’s GDP. In the case of aging, highly skilled personnel are no longer available to mentor replacements and there are fewer qualified workers to fill the gaps, The West has the highest proportion of R&amp;D researchers, followed by Asia and Eastern Europe. The numbers may not be sustainable in regions with increasing old age dependency.</p>
+</div>
+</div>
+<hr>
 </section>
 <section id="research-question" class="level2">
 <h2 class="anchored" data-anchor-id="research-question">Research Question</h2>
-<p>The impact of aging demographics on R&amp;D investment and productivity remains unclear. Predictive modelling of time series data can be used to assess the potential impact on GDP and overall economic prosperity by examining the relationship between R&amp;D indicators and age dependency.</p>
-<p>How will aging populations in traditionally dominant R&amp;D regions affect global leadership in innovation and technology development? This report investigates the potential for a paradigm shift in R&amp;D leadership from Western regions to emerging economies, which, despite also aging, have different demographic profiles and economic dynamics.</p>
+<p>How will aging populations in traditionally dominant R&amp;D regions affect global leadership in innovation and technology development?</p>
+<hr>
 </section>
-<section id="data-and-methods" class="level2">
-<h2 class="anchored" data-anchor-id="data-and-methods">Data and Methods</h2>
-<p>While investment in research and development (R&amp;D) is widely recognized as vital for driving innovation and economic growth, its use as a singular measure can be inconsistent due to variations in reporting methodologies across countries. Different accounting practices, definitions of R&amp;D activities, and levels of government support for research can lead to disparities in reported investment figures. Relying solely on investment data, therefore, may not provide a comprehensive understanding of a country’s innovation landscape or its capacity for scientific advancement. By complementing investment data with other indicators such as scientific productivity and the number of researchers engaged in R&amp;D, a more nuanced perspective on a country’s innovation ecosystem and its potential for sustainable economic development is gained.</p>
-<p>The <strong>Varieties of Democracy</strong> R package <code>vdem</code> was used to gather political geographic region data (e_regionpol_6C).</p>
-<p>The <strong>World Bank</strong> Bank package <code>wbstats</code> was used to gather data on total population, scientific productivity (measured by number of scientific publications and researchers working in R&amp;D fields), and population age demographics:</p>
-<ul>
-<li><p>Population, total (SP.POP.TOTL): Total population is based on the de facto definition of population, which counts all residents regardless of legal status or citizenship. The values shown are midyear estimates.</p></li>
-<li><p>Age dependency ratio (SP.POP.DPND.OL): Ratio of older dependents (65+) to working-age population (15-64), <strong>expressed as proportion of dependents per 100 working-age population</strong>.</p></li>
-<li><p>Number of scientific articles (IP.JRN.ARTC.SC): Number of scientific and technical journal articles published in the following fields: physics, biology, chemistry, mathematics, clinical medicine, biomedical research, engineering and technology, and earth and space sciences.Data are from National Science Foundation, Science and Engineering Indicators. <strong>These data are raw numbers whereas the other variables are scaled to population.</strong> This variable will be transformed to publications per million to mirror the researchers in R&amp;D, the final indicator.</p></li>
-<li><p>Researchers in R&amp;D per million (SP.POP.SCIE.RD.P6): Number of researchers engaged in R&amp;D, <strong>expressed per million</strong> who are defined as professionals conducting research and improving or developing concepts, theories, models techniques instrumentation, software of operational methods. R&amp;D covers basic research, applied research, and experimental development.</p></li>
-</ul>
+<section id="research-answers" class="level2">
+<h2 class="anchored" data-anchor-id="research-answers">Research Answers</h2>
+<section id="aging-is-universal-but-asymmetric" class="level3">
+<h3 class="anchored" data-anchor-id="aging-is-universal-but-asymmetric">Aging is Universal but Asymmetric</h3>
+<p>All six regions show rising old age dependency from 1996 to 2019, but the rate and current level vary substantially. The West and Eastern Europe lead with the highest dependency ratios. Asia presents a particularly misleading regional average – <a href="https://chinapower.csis.org/china-demographics-challenges/">China’s population is shrinking and aging rapidly</a> while <a href="https://www.deccanherald.com/india/indias-population-estimated-at-144-crore-24-in-0-14-age-bracket-unfpa-report-2981883">India, which recently surpassed China in total population, has only 7% aged 65+</a>. Africa’s dependency ratio remains the lowest but is rising. Regional trends are a starting point; country-level analysis is essential for investment decisions.</p>
+<p><em>Figure 1. Trends in old age dependency by region, 1996–2019.</em></p>
+<p><img src="plotoldAgeDependency.jpeg" class="img-fluid"></p>
 </section>
-<section id="time-series-analysis-1996-2019" class="level2">
-<h2 class="anchored" data-anchor-id="time-series-analysis-1996-2019">Time Series Analysis (1996-2019)</h2>
-<p>Data for age dependency ratio are available from 1973, but data for the remaining variables are available from 1996-2020. To avoid possible disruptions from the COVID-19 pandemic in 2020, the period examined is 1996-2019.</p>
-<p>Time series data for two measures of R&amp;D and age dependency from 1996-2019 are used analyze changes and identify trends that can be used to predict or forecast future changes and trends. Results of such analysis provide data for evidence-based decision-making, in this case for funding investments globally. When the data are visualizing on the same graph, the most variability by region is seen in scientific publications. In Asia, the West, and Eastern Europe, scientific publications have a larger growth rate.</p>
-<p>When the data are visualized separately by region, there is greater variability evident (scales are adjusted to each region to better observe local trends). The West far outstrips all other regions for number of scientific publications, with Eastern Europe showing the most growth compared to the remaining regions. There is a slight uptick in publications in the Middle East in recent years, but that value should be taken with a caveat due to the issues noted in the introduction. The number of researchers in R&amp;D indicates the most instability over the period of interest, particularly in Asia.The West has the largest number of R&amp;D researchers and the steepest growth curve.</p>
+<section id="rd-expenditure-growth-slows-as-populations-age" class="level3">
+<h3 class="anchored" data-anchor-id="rd-expenditure-growth-slows-as-populations-age">R&amp;D Expenditure Growth Slows as Populations Age</h3>
+<p>Grouping countries by old age dependency using Jenks natural breaks reveals a clear pattern: middle-aged countries (moderate dependency ratios) show the highest R&amp;D expenditure growth at an average of 3.5% per three-year period. Countries with older populations – including Italy and Japan – show slower growth at 2.1% and 2.8% respectively. This is not simply a wealth effect: these are among the wealthiest countries in the dataset.</p>
+<p><em>Figure 2. Change in R&amp;D expenditure every three years by age dependency category, 1996–2019.</em></p>
+<iframe src="RdExpenditureChange.html" width="100%" height="600" style="border:none;">
+</iframe>
 </section>
-<section id="predicted-values" class="level2">
-<h2 class="anchored" data-anchor-id="predicted-values">Predicted Values</h2>
-<p>To estimate the impact of age dependency on R&amp;D productivity, a time series regression was used to look at the relationship between two measures of research productivity and age dependency.</p>
-<p>Predictive Scenarios: Offer scenarios based on your predictive models. “Our models forecast that by 2040, countries like India and Brazil could escalate their global R&amp;D standings due to their younger work forces and improving educational infrastructures, challenging the current leaders.”</p>
-<p>Compare R&amp;D dynamics between countries with aging populations and those with younger populations. Highlight specific sectors that might be more vulnerable to workforce aging or benefit from youthful demographics.</p>
-<p>Visual Data Representation: Early in the introduction, include a graph or visual representation of the projected population shifts and their correlation with R&amp;D spending trends across different regions.</p>
-<section id="scientific-output" class="level3">
-<h3 class="anchored" data-anchor-id="scientific-output">Scientific Output</h3>
-<p>The y-axis in the graphs represents the percentage of papers relative to GDP. For instance, a scaled publication value of 20% means that the number of papers is 20% of the GDP. Predictive modeling incorporates trends in GDP over decades along with the volume of papers produced, crucial for nations experiencing simultaneous economic growth and increased influence. India serves as an exemplary case, exhibiting rapid economic growth and rising geopolitical stature.</p>
-<p>Noteworthy patterns emerge in both current and predicted trends, with graphs scaled to the data for each region:</p>
-<ol type="1">
-<li><p>Growth in the West has halted but remains stable, resulting in a comparatively lower predicted growth curve, with publications relative to GDP increasing by over 40%. All other regions continue to increase their output. Eastern Europe closely mirrors the West but experienced a publication downturn during the Kosovo War.</p></li>
-<li><p>Africa has witnessed sporadic growth in scientific output, with the peak of papers produced only accounting for 4% of GDP. Despite its vast size and human potential, Africa’s output does not match its potential. Predictive modeling suggests growth will be severely limited.</p></li>
-<li><p>The Middle East exhibits the steepest growth trajectory, driven largely by a surge in output over the past decade, with the highest predicted growth. There are, however, national level concerns regarding the means by which some Middle Eastern countries achieve their output, such as the boosting of Saudi Arabia university rankings via offers of cash in exchange for academics listing those universities as the <a href="https://www.science.org/content/article/vendor-offering-citations-purchase-latest-bad-actor-scholarly-publishing">primary</a> or <a href="https://www.science.org/doi/10.1126/science.334.6061.1344">secondary</a> affiliation to boost academic rankings internationally. This is part of a larger issue of <a href="https://www.science.org/content/article/vendor-offering-citations-purchase-latest-bad-actor-scholarly-publishing">academic honesty</a> Indeed, <a href="https://www.whitehouse.gov/ostp/news-updates/2022/08/31/an-update-on-research-securitystreamlining-disclosure-standards-to-enhance-clarity-transparency-and-equity/">research security and integrity are increasing concerns in the US</a> and integrity, particularly in the US. Issues such as <a href="https://crsreports.congress.gov/product/pdf/IF/IF12589">malignant foreign talent recruitment</a> have been identified.</p></li>
-<li><p>Asia and Latin America are predicted to experience similar increases in output, albeit with varying proportions due to publications relative to GDP. For instance, Latin America’s output is projected to increase from 6% to approximately 8.4%, while Asia’s is expected to rise from 8% to around 11%. While Asia encompasses a vast geographic region, unlike Africa, there exists significant disparity in economies and scientific efforts. Although Africa includes a few wealthy nations, their research output is incomparable to wealthier Asian nations such as Japan, South Korea, or Singapore.</p></li>
-</ol>
+<section id="the-west-has-plateaued-emerging-regions-continue-to-grow" class="level3">
+<h3 class="anchored" data-anchor-id="the-west-has-plateaued-emerging-regions-continue-to-grow">The West Has Plateaued; Emerging Regions Continue to Grow</h3>
+<p>Scientific publication output scaled to population tells a striking story. The West has the highest absolute output but has shown no growth for approximately seven years. Eastern Europe closely mirrors the West but experienced a publication downturn during the Kosovo War. Asia, Latin America, and the Middle East continue to grow, with the Middle East showing the steepest trajectory – though some of that growth reflects <a href="https://www.science.org/content/article/vendor-offering-citations-purchase-latest-bad-actor-scholarly-publishing">citation manipulation practices</a> documented in Saudi Arabia, which inflates rankings by paying academics to list Saudi institutions as affiliations – part of a broader pattern of <a href="https://www.science.org/doi/10.1126/science.334.6061.1344">research integrity concerns</a> including <a href="https://crsreports.congress.gov/product/pdf/IF/IF12589">malignant foreign talent recruitment</a> that have drawn attention from <a href="https://www.whitehouse.gov/ostp/news-updates/2022/08/31/an-update-on-research-securitystreamlining-disclosure-standards-to-enhance-clarity-transparency-and-equity/">US research security policy</a>.</p>
+<p>Predictive regression models confirm the regional divergence. As old age dependency rises, publications per million decline – with the steepest predicted declines in the West and Eastern Europe, and continued growth projected for Asia, Latin America, and the Middle East. Africa and the Middle East show the widest prediction intervals, reflecting less consistent historical data.</p>
+<p><em>Figure 3. Predicted impact of aging population on scientific publications per million, by region.</em></p>
 <iframe src="PredPubs.html" width="100%" height="600" style="border:none;">
 </iframe>
-<p>Given that within-region variation outside the West may not represent all countries within the area, an analysis focusing on the wealthiest countries within each region could be valuable in identifying potential pairings between wealthy nations with high scientific productivity but aging populations and countries with burgeoning potential and youthful populations. The starting point for identifying such countries can be found in previous interaction scatterplot visualizations exploring the relationship between variables.</p>
 </section>
-<section id="researchers-in-rd" class="level3">
-<h3 class="anchored" data-anchor-id="researchers-in-rd">Researchers in R&amp;D</h3>
-<p>As above, the data in each panel are scaled to the specific region. Scientific output has exhibited consistent growth across all regions during the study period, except for one notable exception: the West has remained stable without any growth for the past seven years. Despite this stagnation, the West maintains the highest output among all regions. In contrast, Asia, Latin America, and the Middle East have experienced exponential growth.</p>
-<p>Eastern Europe, having weathered significant political upheavals earlier in the past decade, has since rebounded and begun to increase productivity. However, the ongoing conflict in Ukraine poses a potential threat to this upward trend, emphasizing the critical role of political stability alongside a robust GDP.</p>
-<p>Africa’s scientific output has shown limited and inconsistent growth, likely due to political turbulence and erratic economic conditions. When comparing current time series data to predicted values, Africa, the Middle East, and Latin America display wider margins of error in prediction, reflecting the less consistent data observed over the study period. This unpredictability follows a decreasing order, with Africa being the most unpredictable. Additionally, Asia continues to maintain a notably high growth curve, while projections for the West and Eastern Europe suggest less significant gains in the foreseeable future.</p>
+<section id="researcher-numbers-are-most-unstable-in-asia" class="level3">
+<h3 class="anchored" data-anchor-id="researcher-numbers-are-most-unstable-in-asia">Researcher Numbers Are Most Unstable in Asia</h3>
+<p>The number of researchers in R&amp;D shows greater volatility than publication counts, particularly in Asia. The West has the largest researcher base and steepest historical growth curve but has begun to flatten. Asia, Latin America, and the Middle East show exponential growth. Eastern Europe rebounded after political upheavals earlier in the study period, though the ongoing conflict in Ukraine poses a direct threat – Ukraine has already <a href="https://www.nature.com/articles/s41599-023-02346-x">lost 33.5% of its researchers</a>, and even if the conflict ended, permanent losses are estimated at 7%. The broader lesson: research infrastructure collapses faster than it builds, and workforce gaps compound across generations through lost mentorship capacity.</p>
+<p><em>Figure 4. Predicted impact of aging population on researchers in R&amp;D per million, by region.</em></p>
 <iframe src="PredRd.html" width="100%" height="600" style="border:none;">
 </iframe>
-<p>As noted above, Within-region variation can paint a different picture. For instance, comparing researchers per million in Japan versus Cambodia reveals that regional-level analysis serves as only a starting point. Similarly, comparing Kenya to the Democratic Republic of the Congo highlights significant disparities in current output and potential. These data are accessible in the interactive scatterplots under the section exploring the relationship between variables.</p>
+<hr>
 </section>
 </section>
-<section id="solution" class="level2">
-<h2 class="anchored" data-anchor-id="solution">Solution</h2>
-<p>This analysis serves as an exploration of regional trends, with individual country models representing the next step. Deeper investigations into top-performing countries within regions with young populations will be essential for assessing investment potential and partnership opportunities.</p>
-<p>To address the challenges posed by aging populations in R&amp;D, countries may explore strategic partnerships and investment opportunities. Major R&amp;D leaders such as the US, Germany, UK, and Japan often engage in bilateral or multilateral funding agreements to foster mutual benefit. These agreements are driven by a variety of factors, including similarity in merit review, capacity to invest equally, access to specialized instruments and model programs. While younger countries may possess workforce potential, they often lack resources for higher education and innovation. Strategic partnerships with less affluent countries and young populations, such as the <a href="https://www.nih.gov/news-events/news-releases/nih-awards-nearly-75m-catalyze-data-science-research-africa">NIH DS-I Africa</a> or <a href="https://trendinafrica.org/">TREND in Africa</a> initiatives, aim to build research infrastructure in regions with untapped human talent. By investing in such partnerships, Western countries can enhance innovation capabilities in regions lacking capital, thereby ensuring their continued relevance in the evolving R&amp;D landscape. Meanwhile, regions with youthful populations stand poised to seize opportunities and emerge as significant players in global R&amp;D.</p>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>This analysis examines regional trends; country-level models are the essential next step. Within-region variation is substantial – Japan versus Cambodia, or Kenya versus the Democratic Republic of the Congo, represent entirely different starting points for investment potential. Identifying high-performing countries within young-population regions and pairing them with aging high-GDP countries facing workforce gaps is the practical output of this analysis framework.</p>
+<p>Future iterations could incorporate clinical trials, patents, and grants data for a more complete picture of the research timeline. Advanced network analysis could track the evolution of international collaborations. Machine learning models could forecast which specific fields face the largest workforce shortfalls.</p>
+<hr>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Many countries with high gross domestic product (GDP) exhibit increasingly top-heavy age demographics, while those with lower GDP tend to have more bottom-heavy distributions. High GDP countries often lead in terms of research and development (R&amp;D), but will that be sustained when the aging population of workers retires? This report uses <strong>time series plots and predictive regression models</strong> to explore the relationship between R&amp;D indicators and age demographics. The findings suggest a future shift in R&amp;D leadership from Western regions, which currently dominate, to emerging regions, which are rapidly aging but still possess significant growth potential. To maintain competitive advantage, countries with aging populations are recommended to invest in strategic partnerships and collaborative initiatives to leverage the youthful demographics of emerging regions. This approach will not only sustain but also enhance their R&amp;D capabilities, ensuring a balanced global R&amp;D landscape.</p>
+<section id="study-design" class="level2">
+<h2 class="anchored" data-anchor-id="study-design">Study Design</h2>
+<p><strong>Data:</strong> V-Dem dataset accessed via <code>vdemdata</code> R package for political geographic region classification. World Bank data accessed via <code>wbstats</code>: total population (SP.POP.TOTL), GDP (NY.GDP.MKTP.CD), old age dependency ratio (SP.POP.DPND.OL), R&amp;D expenditure as % of GDP (GB.XPD.RSDV.GD.ZS), researchers in R&amp;D per million (SP.POP.SCIE.RD.P6), and scientific journal articles (IP.JRN.ARTC.SC). Publication counts were transformed to per-million scale to match the researchers variable. Analysis period: 1996–2019 (excluding 2020 to avoid COVID-19 disruption). Merge performed on ISO3 country code and year.</p>
+<p><strong>Analytical Approach:</strong></p>
+<ol type="1">
+<li>Downloaded and merged V-Dem and World Bank data on ISO3 country code and year</li>
+<li>Summarized all variables by region and year using medians (1996–2019)</li>
+<li>Produced static faceted line chart of old age dependency trends by region</li>
+<li>Applied Jenks natural breaks to classify countries into three age dependency groups; computed three-year change in R&amp;D expenditure per group and visualized as interactive time series</li>
+<li>Fit linear regression models with region interaction terms for two outcomes (publications per million, researchers per million) as a function of old age dependency; generated predicted values using <code>ggeffects::ggpredict()</code> and visualized as interactive faceted ribbon plots by region</li>
+</ol>
+<hr>
 </section>
-<section id="code-chunks" class="level2">
-<h2 class="anchored" data-anchor-id="code-chunks">Code Chunks</h2>
-<p><strong>Code for packages and getting data</strong></p>
-<div class="cell" data-warnings="false" data-messages="false">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#load packages for data reading and wrangling</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table) <span class="co">#read data</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor) <span class="co">#clean names</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr); <span class="fu">library</span>(tidytable); </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr); <span class="fu">library</span>(tidyr) <span class="co">#wrangle data</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(countrycode) <span class="co">#country codes</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#load packages for data via API</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(wbstats); <span class="fu">library</span>(vdemdata)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#load packages for data visualization</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2); <span class="fu">library</span>(plotly); <span class="fu">library</span>(ggrepel)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(classInt); <span class="fu">library</span>(scales) </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#regression</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot); <span class="fu">library</span>(sjmisc); <span class="fu">library</span>(ggeffects)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#citation</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(grateful)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">#get data from vdem</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>vdemData <span class="ot">&lt;-</span> vdem <span class="sc">|&gt;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">vDemCtryId =</span> country_id,</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">country =</span> country_name, </span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">region =</span> e_regionpol_6C,</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    year</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">region =</span> <span class="fu">case_match</span>(region, </span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Eastern Europe"</span>, </span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>     <span class="dv">2</span> <span class="sc">~</span> <span class="st">"Latin America"</span>,  </span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>     <span class="dv">3</span> <span class="sc">~</span> <span class="st">"Middle East"</span>,   </span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>     <span class="dv">4</span> <span class="sc">~</span> <span class="st">"Africa"</span>, </span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>     <span class="dv">5</span> <span class="sc">~</span> <span class="st">"the West"</span>, </span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>     <span class="dv">6</span> <span class="sc">~</span> <span class="st">"Asia"</span>)</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co">#Add country codes to vdem data for final merge</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>vdemData <span class="ot">&lt;-</span> vdemData <span class="sc">|&gt;</span>    </span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">iso3c =</span> <span class="fu">countrycode</span>(</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">sourcevar =</span> vDemCtryId, </span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">origin =</span> <span class="st">"vdem"</span>,         </span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">destination =</span> <span class="st">"wb"</span>))</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co"># store indicators from World Bank</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>indicators <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="st">'popTotal'</span> <span class="ot">=</span> <span class="st">'SP.POP.TOTL'</span>, </span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="st">'gdp'</span> <span class="ot">=</span> <span class="st">'NY.GDP.MKTP.CD'</span>,</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  <span class="st">'oldAgeDependency'</span> <span class="ot">=</span> <span class="st">'SP.POP.DPND.OL'</span>,</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="st">'rdExpenditure'</span> <span class="ot">=</span> <span class="st">'GB.XPD.RSDV.GD.ZS'</span>,</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="st">'researchersRD'</span> <span class="ot">=</span> <span class="st">'SP.POP.SCIE.RD.P6'</span>, </span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="st">'outputPubs'</span> <span class="ot">=</span> <span class="st">'IP.JRN.ARTC.SC'</span>)</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="co"># download world bank data</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>wbData <span class="ot">&lt;-</span> <span class="fu">wb_data</span>(indicators, <span class="at">mrv=</span><span class="dv">50</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">!</span>iso2c) <span class="sc">|&gt;</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">year =</span> date)</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="co">#Perform left join using common iso3c variable and year</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>rd <span class="ot">&lt;-</span> <span class="fu">left_join</span>(vdemData, wbData, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"iso3c"</span>, <span class="st">"year"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">country =</span> country.x) <span class="sc">|&gt;</span> <span class="co"># rename country.x, keep vdem country</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">!</span>country.y)  </span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="co">#remove extra country id</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>rd <span class="ot">&lt;-</span> rd <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">!</span>vDemCtryId)</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co">#relocate columns</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>rd <span class="ot">&lt;-</span> rd <span class="sc">|&gt;</span> <span class="fu">relocate</span>(iso3c, <span class="at">.before =</span> country)</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale outputPubs to per million people</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>rd<span class="sc">$</span>outputPubsScaled <span class="ot">&lt;-</span> (rd<span class="sc">$</span>outputPubs <span class="sc">/</span> rd<span class="sc">$</span>popTotal) <span class="sc">*</span> <span class="fl">1e6</span>  <span class="co"># Multiplies by 1,000,000 to scale per million</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p><strong>Code for creating intro age dependency graphs</strong></p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#filter by missing data</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>rdDateLimit <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(rd, year <span class="sc">&gt;</span> <span class="dv">1995</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>rdDateLimit <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(rdDateLimit, year <span class="sc">&lt;</span> <span class="dv">2020</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#summarize by year but keep country out</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>rdSummarize <span class="ot">&lt;-</span> rdDateLimit <span class="sc">%&gt;%</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region, year) <span class="sc">%&gt;%</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">oldAgeDependencyMedian =</span> <span class="fu">median</span>(oldAgeDependency, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">rdExpenditureMedian =</span> <span class="fu">median</span>(rdExpenditure, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">researchersRDMedian =</span> <span class="fu">median</span>(researchersRD, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">outputPubsMedian =</span> <span class="fu">median</span>(outputPubs, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">outputPubsScaledMedian =</span> <span class="fu">median</span>(outputPubsScaled, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">gdpMedian =</span> <span class="fu">median</span>(gdp, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">popTotalMedian =</span> <span class="fu">median</span>(popTotal, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">#aging plot</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>plotoldAgeDependency <span class="ot">&lt;-</span> </span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(rdSummarize, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> oldAgeDependencyMedian, <span class="at">color =</span> region)) <span class="sc">+</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">''</span>,</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>         <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="st">"Median Value for Age Dependency"</span>,</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">caption=</span> <span class="st">'Data Source: World Bank'</span>) <span class="sc">+</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_viridis_d</span>() <span class="sc">+</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>region, <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">scales=</span><span class="st">'free'</span>)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plotoldAgeDependency.jpeg"</span>, <span class="at">plot =</span> plotoldAgeDependency, <span class="at">device =</span> <span class="st">"jpeg"</span>, </span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">width =</span> <span class="dv">9</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">units =</span> <span class="st">'in'</span>, <span class="at">dpi =</span> <span class="dv">300</span>, <span class="at">type =</span> <span class="st">'cairo'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p><strong>Code for creating intro RD change over time graph by age category</strong></p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initial filtering and data cleaning</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>rdFiltered <span class="ot">&lt;-</span> rd <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;</span> <span class="dv">1995</span>, year <span class="sc">&lt;</span> <span class="dv">2020</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(oldAgeDependency), <span class="sc">!</span><span class="fu">is.na</span>(rdExpenditure))</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Jenks natural breaks on the complete data set</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>jenks_breaks <span class="ot">&lt;-</span> <span class="fu">classIntervals</span>(rdFiltered<span class="sc">$</span>oldAgeDependency, <span class="at">n =</span> <span class="dv">3</span>, <span class="at">style =</span> <span class="st">"jenks"</span>)<span class="sc">$</span>brks</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure unique breaks</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">length</span>(<span class="fu">unique</span>(jenks_breaks)) <span class="sc">&lt;</span> <span class="fu">length</span>(jenks_breaks)) {</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  jenks_breaks <span class="ot">&lt;-</span> <span class="fu">unique</span>(jenks_breaks)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>break_labels <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"%0.2f - %0.2f"</span>, <span class="fu">head</span>(jenks_breaks, <span class="sc">-</span><span class="dv">1</span>), <span class="fu">tail</span>(jenks_breaks, <span class="sc">-</span><span class="dv">1</span>))</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Assign age categories with detailed labels</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>rdFiltered <span class="ot">&lt;-</span> rdFiltered <span class="sc">%&gt;%</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ageCategory =</span> <span class="fu">cut</span>(oldAgeDependency, <span class="at">breaks =</span> jenks_breaks, <span class="at">labels =</span> break_labels, <span class="at">include.lowest =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarize data by year and age category</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>rdSummarize <span class="ot">&lt;-</span> rdFiltered <span class="sc">%&gt;%</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, ageCategory) <span class="sc">%&gt;%</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">oldAgeDependencyMedian =</span> <span class="fu">median</span>(oldAgeDependency, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">rdExpenditureMedian =</span> <span class="fu">median</span>(rdExpenditure, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">'drop'</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Base year calculation - the nearest year &gt;= 1996 that is a multiple of 3</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>base_year <span class="ot">&lt;-</span> <span class="dv">1996</span> <span class="sc">+</span> ((<span class="dv">3</span> <span class="sc">-</span> (<span class="dv">1996</span> <span class="sc">%%</span> <span class="dv">3</span>)) <span class="sc">%%</span> <span class="dv">3</span>)</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute changes within each age category</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>rdSummarize <span class="ot">&lt;-</span> rdSummarize <span class="sc">%&gt;%</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(ageCategory, year) <span class="sc">%&gt;%</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(ageCategory) <span class="sc">%&gt;%</span></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">changeInExpenditure =</span> rdExpenditureMedian <span class="sc">-</span> <span class="fu">lag</span>(rdExpenditureMedian, <span class="at">n =</span> <span class="dv">3</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare labels for changes</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>rdSummarize <span class="ot">&lt;-</span> rdSummarize <span class="sc">%&gt;%</span></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">label =</span> <span class="fu">ifelse</span>(year <span class="sc">&gt;=</span> base_year <span class="sc">&amp;</span> (year <span class="sc">-</span> base_year) <span class="sc">%%</span> <span class="dv">3</span> <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(changeInExpenditure),</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>                        <span class="fu">sprintf</span>(<span class="st">"Δ %.2f"</span>, changeInExpenditure), <span class="st">""</span>))</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the data</span></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>plotAgeRD <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(rdSummarize, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> rdExpenditureMedian, <span class="at">group =</span> ageCategory, <span class="at">color =</span> ageCategory)) <span class="sc">+</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span>  </span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">'Change (Δ) in R&amp;D Expenditure Every Three Years'</span>,</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"R&amp;D Expenditure Median (USD per 1 Million)"</span>,</span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Old Age Dependency"</span>) <span class="sc">+</span></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(base_year, <span class="fu">max</span>(rdSummarize<span class="sc">$</span>year), <span class="at">by =</span> <span class="dv">3</span>)) <span class="sc">+</span></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="fu">min</span>(rdSummarize<span class="sc">$</span>rdExpenditureMedian) <span class="sc">*</span> <span class="fl">0.9</span>, <span class="fu">max</span>(rdSummarize<span class="sc">$</span>rdExpenditureMedian) <span class="sc">*</span> <span class="fl">1.1</span>)) <span class="sc">+</span></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_d</span>(<span class="at">end =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'right'</span>, </span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.spacing.x =</span> <span class="fu">unit</span>(<span class="fl">1.0</span>, <span class="st">'cm'</span>)) <span class="sc">+</span></span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.spacing =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"cm"</span>))</span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to interactive plot</span></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplotly</span>(plotAgeRD)</span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>htmlwidgets<span class="sc">::</span><span class="fu">saveWidget</span>(p1, <span class="st">"RdExpenditureChange.html"</span>, <span class="at">selfcontained =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p><strong>Code for predictive models for publications and age dependency</strong></p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fit and plot model with 3-way-interaction</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(outputPubsScaled <span class="sc">~</span>  oldAgeDependency <span class="sc">*</span> region, <span class="at">data =</span> rd)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>preds <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(fit, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"oldAgeDependency"</span>, <span class="st">"region"</span>))</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot using ggplot2</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>pubswidget <span class="ot">=</span><span class="fu">ggplot</span>(preds, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> predicted)) <span class="sc">+</span>  <span class="co"># Remove color and fill from global aesthetics</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color=</span><span class="st">"steelblue"</span>) <span class="sc">+</span>  <span class="co"># Set line color to blue</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> conf.low, <span class="at">ymax =</span> conf.high), <span class="at">fill =</span> <span class="st">"slategray3"</span>, <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span>  <span class="co"># Set ribbon color to light blue</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Aging Population Index"</span>,</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of Publications per Million"</span>,</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Predicted Impact of Aging Population on Publications"</span>,</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Analyzing Trends Over Regions"</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,  <span class="co"># Ensure legend is not shown</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.background =</span> <span class="fu">element_rect</span>(<span class="at">colour =</span> <span class="st">"snow"</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>),</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.text.x =</span> <span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"snow"</span>)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>group)</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to interactive plot</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplotly</span>(pubswidget)</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>htmlwidgets<span class="sc">::</span><span class="fu">saveWidget</span>(p2, <span class="st">"PredPubs.html"</span>, <span class="at">selfcontained =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p><strong>Code for predictive models for researchers in R&amp;D and age dependency</strong></p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fit and plot model with 3-way-interaction</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>fit2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(researchersRD <span class="sc">~</span>  oldAgeDependency <span class="sc">*</span> region, <span class="at">data =</span> rd)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>preds <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(fit2, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"oldAgeDependency"</span>, <span class="st">"region"</span>))</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot using ggplot2</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>rdwidget <span class="ot">=</span> <span class="fu">ggplot</span>(preds, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> predicted)) <span class="sc">+</span>  <span class="co"># Remove color and fill from global aesthetics</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color=</span><span class="st">"steelblue"</span>) <span class="sc">+</span>  <span class="co"># Set line color to blue</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> conf.low, <span class="at">ymax =</span> conf.high), <span class="at">fill =</span> <span class="st">"slategray3"</span>, <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span>  <span class="co"># Set ribbon color to light blue</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Aging Population Index"</span>,</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of Researchers in R&amp;R per Million"</span>,</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Predicted Impact of Aging Population on Researchers in R&amp;D"</span>,</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Analyzing Trends Over Regions"</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,  <span class="co"># Ensure legend is not shown</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.background =</span> <span class="fu">element_rect</span>(<span class="at">colour =</span> <span class="st">"snow"</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>),</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.text.x =</span> <span class="fu">element_text</span>(<span class="at">colour =</span> <span class="st">"snow"</span>)</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>group)</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to interactive plot</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> <span class="fu">ggplotly</span>(rdwidget)</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>htmlwidgets<span class="sc">::</span><span class="fu">saveWidget</span>(p3, <span class="st">"PredRd.html"</span>, <span class="at">selfcontained =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
+<section id="data-code" class="level2">
+<h2 class="anchored" data-anchor-id="data-code">Data &amp; Code</h2>
+<p><strong>Repository:</strong> <a href="https://github.com/kchoover14/forecasting-rd-leadership-dynamics">github.com/kchoover14/forecasting-rd-leadership-dynamics</a></p>
+<hr>
+</section>
+<section id="tools-technologies" class="level2">
+<h2 class="anchored" data-anchor-id="tools-technologies">Tools &amp; Technologies</h2>
+<ul>
+<li><strong>Languages:</strong> R</li>
+<li><strong>Tools:</strong> RStudio, GitHub</li>
+<li><strong>Packages:</strong> <code>vdemdata</code>, <code>wbstats</code>, <code>countrycode</code>, <code>dplyr</code>, <code>tidyr</code>, <code>ggplot2</code>, <code>plotly</code>, <code>ggeffects</code>, <code>classInt</code>, <code>scales</code>, <code>htmlwidgets</code></li>
+</ul>
+<hr>
+</section>
+<section id="expertise" class="level2">
+<h2 class="anchored" data-anchor-id="expertise">Expertise</h2>
+<p><strong>Domain Expertise:</strong> R&amp;D policy | demographic forecasting | time series analysis | World Bank data | V-Dem data | regression modeling | interactive data visualization</p>
+<p><strong>Transferable Expertise:</strong> Translating demographic trend data into actionable forecasts for strategic investment decisions – building regression models that reveal where structural shifts are underway before they are visible in aggregate statistics.</p>
 </section>
 
 </main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
@@ -517,184 +279,184 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
       return codeEl.innerText;
     }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -702,185 +464,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 
 
