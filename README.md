@@ -8,18 +8,21 @@ The [portfolio page](https://kchoover14.github.io/forecasting-rd-leadership-dyna
 
 ## Tools & Technologies
 
-- **Languages:** R
-- **Tools:** RStudio, GitHub
-- **Packages:** `vdemdata`, `wbstats`, `countrycode`, `dplyr`, `tidyr`, `ggplot2`, `plotly`, `ggeffects`, `classInt`, `scales`, `htmlwidgets`
+**Languages:** R
 
-## Reproducibility
+**Tools:** RStudio | GitHub
 
-This project uses [`renv`](https://rstudio.github.io/renv/) for package version management. To restore the environment:
+**Packages:** vdemdata | wbstats | countrycode | dplyr | tidyr | ggplot2 | plotly | ggeffects | classInt | scales | htmlwidgets
 
-```r
-renv::restore()
-```
+## Environment
+
+- `renv.lock` and `renv/` -- restore package environment with `renv::restore()`
 
 ## Expertise
 
 Translating demographic trend data into actionable forecasts for R&D investment strategy -- building regression models that reveal where structural workforce shifts are underway before they are visible in aggregate statistics.
+
+## License
+
+- Code and scripts © Kara C. Hoover, licensed under the [MIT License](LICENSE).
+- Data, figures, and written content © Kara C. Hoover, licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
