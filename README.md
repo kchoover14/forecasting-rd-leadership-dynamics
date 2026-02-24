@@ -1,4 +1,4 @@
-## Time Series Models Forecast a Shift in Global R&D Leadership Away from the West
+## Forecasting Global R&D Leadership Changes
 
 This project combines V-Dem and World Bank data to examine how aging demographics are reshaping global R&D leadership across six world regions from 1996 to 2019. Time series analysis tracks trends in old age dependency, R&D expenditure, scientific publications, and researchers in R&D; Jenks natural breaks classification groups countries by dependency profile to compare expenditure trajectories; and linear regression models with region interactions generate predicted values for two R&D productivity measures as aging increases. The core finding: the West has already plateaued in researcher growth and publication output, while Asia, Latin America, and the Middle East continue to grow -- and predictive models confirm the divergence will deepen if current demographic and investment trajectories continue.
 
